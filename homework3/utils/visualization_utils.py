@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+import os
+
 def plot_comparison(results: List[Dict], metric: str = 'acc') -> None:
     """
     Визуализирует сравнение моделей по заданной метрике.

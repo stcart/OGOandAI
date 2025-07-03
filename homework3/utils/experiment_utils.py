@@ -1,3 +1,12 @@
+import torch
+import time
+import os
+import json
+from tqdm import tqdm
+from torch import optim
+from utils.model_utils import FullyConnectedModel, count_parameters
+from utils.visualization_utils import save_plot
+
 def analyze_overfitting(dataset_name: str = 'mnist', epochs: int = 20,
                         batch_size: int = 64, lr: float = 0.001) -> Dict:
     """
